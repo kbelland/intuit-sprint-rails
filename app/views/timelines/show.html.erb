@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Options:</b>
+  <%= @timeline.options %>
+</p>
+
+<p>
+  <b>Prediction:</b>
+  <%= @timeline.prediction %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @timeline.type %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @timeline.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_timeline_path(@timeline) %> |
+<%= link_to 'Back', timelines_path %>

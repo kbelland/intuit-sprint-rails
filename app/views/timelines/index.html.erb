@@ -1,0 +1,29 @@
+<h1>Listing timelines</h1>
+
+<table>
+  <tr>
+    <th>Options</th>
+    <th>Prediction</th>
+    <th>Type</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @timelines.each do |timeline| %>
+  <tr>
+    <td><%= timeline.options %></td>
+    <td><%= timeline.prediction %></td>
+    <td><%= timeline.type %></td>
+    <td><%= timeline.name %></td>
+    <td><%= link_to 'Show', timeline %></td>
+    <td><%= link_to 'Edit', edit_timeline_path(timeline) %></td>
+    <td><%= link_to 'Destroy', timeline, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Timeline', new_timeline_path %>
