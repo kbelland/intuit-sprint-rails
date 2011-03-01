@@ -1,0 +1,95 @@
+
+html {
+    display: block;
+    height: 320px;
+    width: 1055px;
+}
+
+header {
+    font-size: 93%;
+    position: relative;
+    padding-bottom: 0em;
+    background: #58AA00;
+    width: 950px;
+    display: block;
+    float: left;
+    height: 100px;
+}
+
+h1 {
+    position:relative;
+    background: #58AA00;
+    top: 10px;
+}
+
+h2 {
+    text-align:center;
+}
+
+body {
+    background-attachment: scroll;
+    background-color: white;
+    background-image: none;
+    display: block;
+    font: small 'trebuchet ms',verdana,arial,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 310px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    min-width: 960px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    width: 1265px;
+}
+
+.container {
+    margin-left: 121px;
+    margin-right: 122px;
+    height:500px;
+}
+
+#panel {
+    text-align: right;
+    position: relative;
+    display: inline;
+    right: 12px;
+    top: -60px;
+    width: 200px;
+    float: right;
+    color: #FFFFFF;
+    font-size: 125%
+}
+
+#panel a {
+color: white;
+}
+
+h1 img {
+    position: relative;
+    left: 25px;
+}
+
+.footer-wrapper {
+    width: 100%;
+    background-image: url(http://a3.twimg.com/a/1298507542/images/fronts/bg-ftr-top.gif);
+    height: 47px;
+    background: #eee;
+    text-align:center;
+    bottom: -20px;
+    position: relative;
+}
+
+#footer-panel a{
+    color: #36C;
+    bottom: -10px;
+    position: relative;
+}
+    
