@@ -6,6 +6,7 @@
     <th>Prediction</th>
     <th>Type</th>
     <th>Name</th>
+	<th>Expenses</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,9 +15,10 @@
 <% @timelines.each do |timeline| %>
   <tr>
     <td><%= timeline.options %></td>
-    <td><%= timeline.prediction %></td>
+    <td><%= timeline.twentyyears %></td>
     <td><%= timeline.type %></td>
     <td><%= timeline.name %></td>
+	<td><%= timeline.expenses %></td>
     <td><%= link_to 'Show', timeline %></td>
     <td><%= link_to 'Edit', edit_timeline_path(timeline) %></td>
     <td><%= link_to 'Destroy', timeline, :confirm => 'Are you sure?', :method => :delete %></td>

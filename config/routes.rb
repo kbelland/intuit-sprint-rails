@@ -1,8 +1,8 @@
 Futurepath::Application.routes.draw do
   match '/home', :to => 'pages#home'
-
+    match 'images/compare' => "images#compare", :as => :compare
   resources :timelines
-
+   root :to => "timelines#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -27,6 +27,22 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+    <div class="field">
+    <%= f.label :assets %><br />
+    <%= f.text_field :assets, :value =>0 %>
+  </div>
+    <div class="field">
+    <%= f.label :liability %><br />
+    <%= f.text_field :liability, :value =>0 %>
+  </div>
+    <div class="field">
+    <%= f.label :income %><br />
+    <%= f.text_field :income, :value =>0 %>
+  </div>
+    <div class="field">
+    <%= f.label :expenses %><br />
+    <%= f.text_field :expenses, :value =>0 %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
