@@ -4,8 +4,11 @@
 <%= image_tag("future.jpg") %>
   </h1>
   <div id="panel">
-    <a id ="home_link" href="/home">Home</a>
-    <a id ="signup_link" href="/signup">Sign Up</a>
-
+     <% if user_signed_in? %>
+    Welcome <%= current_user.email %>!
+    <%= link_to "Sign out", destroy_user_session_path %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
   </div>
 </header>

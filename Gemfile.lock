@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: e4cae200f4a55a86774ba98a3182d4c9fb7b0436
+  specs:
+    devise (1.2.rc)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -29,6 +38,8 @@ GEM
       activesupport (= 3.0.4)
     activesupport (3.0.4)
     arel (2.0.8)
+    bcrypt-ruby (2.1.4)
+    bcrypt-ruby (2.1.4-x86-mingw32)
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -39,6 +50,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -65,11 +77,14 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
+    warden (1.0.3)
+      rack (>= 1.0.0)
 
 PLATFORMS
   ruby
   x86-mingw32
 
 DEPENDENCIES
+  devise!
   rails (= 3.0.4)
   sqlite3
