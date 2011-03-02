@@ -7,6 +7,7 @@ html {
 
 header {
     font-size: 93%;
+    font: small 'trebuchet ms',verdana,arial,sans-serif;
     position: relative;
     padding-bottom: 0em;
     background: #58AA00;
@@ -23,7 +24,31 @@ h1 {
 }
 
 h2 {
+    position: relative;
+    top:20px;
     text-align:center;
+}
+
+h3 {
+    color:#FFFFFF;
+}
+
+h4 {
+    position: relative;
+    top: 30px;
+
+}
+
+h5 {
+    position: relative;
+    top: -240px;
+    left: 600px;
+}
+
+h6 {
+    position: relative;
+    font-size: 500%;
+
 }
 
 body {
@@ -62,7 +87,7 @@ body {
     display: inline;
     right: 12px;
     top: -60px;
-    width: 200px;
+    width: 300px;
     float: right;
     color: #FFFFFF;
     font-size: 125%
@@ -78,12 +103,12 @@ h1 img {
 }
 
 .footer-wrapper {
-    width: 100%;
+    width: 110%;
     background-image: url(http://a3.twimg.com/a/1298507542/images/fronts/bg-ftr-top.gif);
-    height: 47px;
+    height: 60px;
     background: #eee;
     text-align:center;
-    bottom: -20px;
+    bottom: -150px;
     position: relative;
 }
 
@@ -91,5 +116,32 @@ h1 img {
     color: #36C;
     bottom: -10px;
     position: relative;
+}
+
+.devise-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #1874CD;
+    font-size: 120%;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    position: relative;
+    top: 120px;
+    right: -350px;
+    color: #FFFFFF;
+
+}
+
+section {
+    position: relative;
+    text-align: center;
+    top:-50px;
+    color: #FFFFFF;
+}
+
+.round { -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+border-radius:	10px;
 }
     

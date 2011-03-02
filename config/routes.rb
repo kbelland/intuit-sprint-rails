@@ -1,7 +1,16 @@
 Futurepath::Application.routes.draw do
+
   match '/home', :to => 'pages#home'
 
+  match '/token' => 'home#token', :as => :token
+  resources :authentication
+
+  devise_for :users
+
+  root :to => 'pages#home'
+
   resources :timelines
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
