@@ -51,6 +51,11 @@ h6 {
 
 }
 
+h7 {
+    position: relative;
+    top: 100px;
+}
+
 body {
     background-attachment: scroll;
     background-color: white;

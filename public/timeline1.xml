@@ -9,39 +9,11 @@
 		Current Lifestyle: College Grad
 	</event>
 	<event
-		start="March 3 2011 12:00:00 GMT"
-		end=
-		isDuration=
-		title=
-		image=
-		link=
+		start="March 10 2011 12:00:00 GMT"
+		end="March 20 2011 12:00:00 GMT"
+		isDuration="true"
+		title="Stuff happens"
 		>
-	</event>
-	<event
-		start="March 3 2011 12:00:00 GMT"
-		end=
-		isDuration=
-		title=
-		image=
-		link=
-		>
-	</event>
-	<event
-		start="March 3 2011 12:00:00 GMT"
-		end=
-		isDuration=
-		title=
-		image=
-		link=
-		>
-	</event>
-	<event
-		start="March 3 2011 12:00:00 GMT"
-		end=
-		isDuration=
-		title=
-		image=
-		link=
-		>
+		Not really that exciting.
 	</event>
 </data>
