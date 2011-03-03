@@ -33,33 +33,6 @@
 					Timeline.loadXML("timeline1.xml", function(xml, url) { eventSource.loadXML(xml, url); });
 				}
 
-<<<<<<< HEAD
-<table>
-  <tr>
-    <th>Options</th>
-    <th>Prediction</th>
-    <th>Type</th>
-    <th>Name</th>
-	<th>Expenses</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @timelines.each do |timeline| %>
-  <tr>
-    <td><%= timeline.options %></td>
-    <td><%= timeline.twentyyears %></td>
-    <td><%= timeline.type %></td>
-    <td><%= timeline.name %></td>
-	<td><%= timeline.expenses %></td>
-    <td><%= link_to 'Show', timeline %></td>
-    <td><%= link_to 'Edit', edit_timeline_path(timeline) %></td>
-    <td><%= link_to 'Destroy', timeline, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-=======
 				var resizeTimerID = null;
 				function onResize() {
 					 if (resizeTimerID == null) {
@@ -74,30 +47,32 @@
 		<body onload="onLoad();" onresize="onResize();">
 			<h10>Listing timelines</h10>
 
-			<table>
-				<tr>
-					<th>Options</th>
-					<th>Prediction</th>
-					<th>Type</th>
-					<th>Name</th>
-					<th></th>
-					<th></th>
-					<th></th>
-				</tr>
->>>>>>> 3fbbbdb92db5ed329b56785134ea4bff2be92104
+					
+		<table>
+			<tr>
+				<th>Options</th>
+				<th>Prediction</th>
+				<th>Type</th>
+				<th>Name</th>
+			<th>Expenses</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
 
-			<% @timelines.each do |timeline| %>
-				<tr>
-					<td><%= timeline.options %></td>
-					<td><%= timeline.prediction %></td>
-					<td><%= timeline.type %></td>
-					<td><%= timeline.name %></td>
-					<td><%= link_to 'Show', timeline %></td>
-					<td><%= link_to 'Edit', edit_timeline_path(timeline) %></td>
-					<td><%= link_to 'Destroy', timeline, :confirm => 'Are you sure?', :method => :delete %></td>
-				</tr>
-			<% end %>
-			</table>
+		<% @timelines.each do |timeline| %>
+			<tr>
+				<td><%= timeline.options %></td>
+				<td><%= timeline.twentyyears %></td>
+				<td><%= timeline.type %></td>
+				<td><%= timeline.name %></td>
+			<td><%= timeline.expenses %></td>
+				<td><%= link_to 'Show', timeline %></td>
+				<td><%= link_to 'Edit', edit_timeline_path(timeline) %></td>
+				<td><%= link_to 'Destroy', timeline, :confirm => 'Are you sure?', :method => :delete %></td>
+			</tr>
+		<% end %>
+		</table>
 
 			<br />
 
