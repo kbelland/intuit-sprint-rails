@@ -2,11 +2,11 @@
 	<event
 		start="March 3 2011 12:00:00 GMT"
 		title="Present Day"
-		image="images/poor.jpg"
+		image="images/rich.jpg"
 		link="www.google.com"
 		>
-		Current Savings: $20K
-		Current Lifestyle: College Grad
+		Current Savings: $100K
+		Current Lifestyle: Rich College Grad
 	</event>
 	<event
 		start="March 10 2011 12:00:00 GMT"

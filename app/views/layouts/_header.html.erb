@@ -4,11 +4,13 @@
 <%= image_tag("logo.jpg", :size=>"140x90") %>
   </h1>
   <div id="panel">
-     <% if user_signed_in? %>
-    Welcome <%= current_user.email %>!
+    <a id ="home_link" href="/home">Home</a>
+    <a id ="signup_link" href="/signup">Sign Up</a>
+  </div>
+   <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
     <%= link_to "Sign out", destroy_user_session_path %>
   <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> <%= link_to "Sign in", new_user_session_path %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
   <% end %>
-  </div>
 </header>
