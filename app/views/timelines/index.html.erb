@@ -51,8 +51,8 @@
 				   
 				  tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
 					t2 = Timeline.create(document.getElementById("my-timeline2"), bandInfos2);
-					Timeline.loadXML("timeline1.xml", function(xml, url) { eventSource.loadXML(xml, url); });
-					Timeline.loadXML("timeline2.xml", function(xml, url) { eventSource2.loadXML(xml, url); });
+					Timeline.loadXML("/timeline1.xml", function(xml, url) { eventSource.loadXML(xml, url); });
+					Timeline.loadXML("/timeline2.xml", function(xml, url) { eventSource2.loadXML(xml, url); });
 				}
 
 				var resizeTimerID = null;
