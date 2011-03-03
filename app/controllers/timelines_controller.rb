@@ -4,6 +4,16 @@ class TimelinesController < ApplicationController
   def index
     @timelines = Timeline.all
 	@profile = params[:profile]
+	
+	@timelines.each do |timeline|
+		if timeline.name == @profile
+			@compare = timeline
+		end
+		if timeline.name == "Real"
+			@real = timeline
+		end
+	end
+	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @timelines }

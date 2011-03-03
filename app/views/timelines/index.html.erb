@@ -1,133 +1,90 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-  <script>Timeline_urlPrefix = "http://static.simile.mit.edu/timeline/api-2.3.0/";
-  ;</script>
-  <!--<script src="http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js?bundle=true" type="text/javascript"></script>-->
-  <script src="/javascripts/timeline-api-from-src.js" type="text/javascript"></script>
-  <script>
-      var tl;
-      function onLoad() {
-          var eventSource = new Timeline.DefaultEventSource();
-          var eventSource2 = new Timeline.DefaultEventSource();
-          var bandInfos = [
-              Timeline.createBandInfo({
-                  eventSource:    eventSource,
-                  date:           "Jan 1 2011 00:00:00 GMT",
-                  width:          "70%",
-                  intervalUnit:   Timeline.DateTime.MONTH,
-                  intervalPixels: 100
-              }),
-              Timeline.createBandInfo({
-                  overview:                true,
-                  eventSource:    eventSource,
-                  date:           "Jan 1 2011 00:00:00 GMT",
-                  width:          "30%",
-                  intervalUnit:   Timeline.DateTime.DECADE,
-                  intervalPixels: 200
-              })
-          ];
-          var bandInfos2 = [
-              Timeline.createBandInfo({
-                  eventSource:    eventSource2,
-                  date:           "Jan 1 2011 00:00:00 GMT",
-                  width:          "70%",
-                  intervalUnit:   Timeline.DateTime.MONTH,
-                  intervalPixels: 100
-              }),
-              Timeline.createBandInfo({
-                  overview:                true,
-                  eventSource:    eventSource2,
-                  date:           "Jan 1 2011 00:00:00 GMT",
-                  width:          "30%",
-                  intervalUnit:   Timeline.DateTime.DECADE,
-                  intervalPixels: 200
-              })
-          ];
-          bandInfos[1].syncWith = 0;
-          bandInfos[1].highlight = true;
-          bandInfos2[1].syncWith = 0;
-          bandInfos2[1].highlight = true;
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+			<script>Timeline_urlPrefix = "http://static.simile.mit.edu/timeline/api-2.3.0/";;</script>
+			<!--<script src="http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js?bundle=true" type="text/javascript"></script>-->
+			<script src="/javascripts/timeline-api-from-src.js" type="text/javascript"></script>
+			<script>
+				var tl;
+				function onLoad() {
+					var eventSource = new Timeline.DefaultEventSource();
+					var eventSource2 = new Timeline.DefaultEventSource();
+				  var bandInfos = [
+					  Timeline.createBandInfo({
+								eventSource:    eventSource,
+								date:           "Jan 1 2011 00:00:00 GMT",
+							  width:          "70%", 
+							  intervalUnit:   Timeline.DateTime.MONTH, 
+							  intervalPixels: 100
+					  }),
+					  Timeline.createBandInfo({
+								overview:				true,
+								eventSource:    eventSource,
+								date:           "Jan 1 2011 00:00:00 GMT",
+							  width:          "30%", 
+							  intervalUnit:   Timeline.DateTime.DECADE, 
+							  intervalPixels: 200
+					  })
+					];
+					var bandInfos2 = [
+						Timeline.createBandInfo({
+								eventSource:    eventSource2,
+								date:           "Jan 1 2011 00:00:00 GMT",
+							  width:          "70%", 
+							  intervalUnit:   Timeline.DateTime.MONTH, 
+							  intervalPixels: 100
+					  }),
+						Timeline.createBandInfo({
+								overview:				true,
+								eventSource:    eventSource2,
+								date:           "Jan 1 2011 00:00:00 GMT",
+							  width:          "30%", 
+							  intervalUnit:   Timeline.DateTime.DECADE, 
+							  intervalPixels: 200
+					  })
+				  ];
+				  bandInfos[1].syncWith = 0;
+					bandInfos[1].highlight = true;
+					bandInfos2[1].syncWith = 0;
+					bandInfos2[1].highlight = true;
+				   
+				  tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
+					t2 = Timeline.create(document.getElementById("my-timeline2"), bandInfos2);
+					Timeline.loadXML("/Real.xml", function(xml, url) { eventSource.loadXML(xml, url); });
+					Timeline.loadXML("<%="/#{@profile}.xml"%>", function(xml, url) { eventSource2.loadXML(xml, url); });
+				}
 
-          tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
-          t2 = Timeline.create(document.getElementById("my-timeline2"), bandInfos2);
-          Timeline.loadXML("/timeline1.xml", function(xml, url) {
-              eventSource.loadXML(xml, url);
-          });
-          Timeline.loadXML("/timeline2.xml", function(xml, url) {
-              eventSource2.loadXML(xml, url);
-          });
-      }
-
-      var resizeTimerID = null;
-      function onResize() {
-          if (resizeTimerID == null) {
-              resizeTimerID = window.setTimeout(function() {
-                  resizeTimerID = null;
-                  tl.layout();
-              }, 500);
-          }
-      }
-  </script>
-</head>
-<body onload="onLoad();" onresize="onResize();">
-<h10>Your Current Path: <%= @persona %> </h10>
+				var resizeTimerID = null;
+				function onResize() {
+					 if (resizeTimerID == null) {
+							 resizeTimerID = window.setTimeout(function() {
+									 resizeTimerID = null;
+									 tl.layout();
+							 }, 500);
+					 }
+				}
+			</script>
+		</head>
+		<body onload="onLoad();" onresize="onResize();">
+			<h3>Your Current Path: </h3>
+<h3>
+				<%= "$#{@real.twentyyears.to_int}.00" %> </h3><br />
+				<%= image_tag("rails.png") %> <br />
+				<%= link_to 'Edit', edit_timeline_path(@real) %> <br /><br />
 
 
-<table>
-  <tr>
-    <th>Options</th>
-    <th>Prediction</th>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-  <% @timelines.each do |timeline| %>
-      <% if timeline.name == 'real' %>
-          <tr>
-            <td><%= timeline.options %></td>
-            <td><%= timeline.twentyyears %></td>
-            <td><%= timeline.name %></td>
-            <td><%= link_to 'Show', timeline %></td>
-            <td><%= link_to 'Edit', edit_timeline_path(timeline) %></td>
-            <td><%= link_to 'Destroy', timeline, :confirm => 'Are you sure?', :method => :delete %></td>
-          </tr>
-      <% end %>
-  <% end %>
+		<% if @profile != nil %>
+				<h3><%= "On the '#{@compare.name}' savings plan:" %></h3>
+				<h3>
+				<%= "$#{@compare.twentyyears.to_int}.00" %>	</h3><br />
+				<%= image_tag("rails.png") %> <br />
+				<%= link_to 'Edit', edit_timeline_path(@compare) %> <br />
+		<% end %>
 
-</table>
-<h10>With your Savings Plan:</h10>
-<table>
-  <tr>
-    <th>Options</th>
-    <th>Prediction</th>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-  <% @timelines.each do |timeline| %>
-      <% if timeline.name == @profile %>
-          <tr>
-            <td><%= timeline.options %></td>
-            <td><%= timeline.twentyyears %></td>
-            <td><%= timeline.name %></td>
-            <td><%= link_to 'Show', timeline %></td>
-            <td><%= link_to 'Edit', edit_timeline_path(timeline) %></td>
-            <td><%= link_to 'Destroy', timeline, :confirm => 'Are you sure?', :method => :delete %></td>
-          </tr>
-      <% end %>
-  <% end %>
-</table>
 
 <%= render "timelineform" %>
-
-
-
 
 
 <br/>
