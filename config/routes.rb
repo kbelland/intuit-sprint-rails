@@ -2,8 +2,10 @@ Futurepath::Application.routes.draw do
 
   match '/home', :to => 'pages#home'
     match 'timelines/compare' => "timelines#compare", :as => :compare
+	match 'timelines/index' => "timelines#index", :as => :index
   resources :timelines
    root :to => "timelines#index"
+   
 
   match '/token' => 'home#token', :as => :token
   resources :authentication

@@ -3,6 +3,7 @@ class TimelinesController < ApplicationController
   # GET /timelines.xml
   def index
     @timelines = Timeline.all
+	@profile = params[:profile]
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @timelines }
@@ -12,7 +13,8 @@ class TimelinesController < ApplicationController
    def compare
     @timelines = Timeline.all
 	
-	
+		@profile = params[:profile]
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @timelines }
