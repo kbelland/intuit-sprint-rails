@@ -9,6 +9,16 @@ class TimelinesController < ApplicationController
     end
   end
 
+   def compare
+    @timelines = Timeline.all
+	
+	
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @timelines }
+    end
+  end
+  
   # GET /timelines/1
   # GET /timelines/1.xml
   def show
