@@ -67,32 +67,24 @@
 			</script>
 		</head>
 		<body onload="onLoad();" onresize="onResize();">
-			<h10>Your Current Path: </h10>
+			<h3>Your Current Path: </h3>
 <h3>
-				<%= @real.name %>
-				<%= "$#{@real.twentyyears.to_int}.00" %> </h3>
-				<%= link_to 'Show', @real %>
-				<%= link_to 'Edit', edit_timeline_path(@real) %>
-				<%= link_to 'Destroy', @real, :confirm => 'Are you sure?', :method => :delete %>
+				<%= "$#{@real.twentyyears.to_int}.00" %> </h3><br />
+				<%= image_tag("rails.png") %> <br />
+				<%= link_to 'Edit', edit_timeline_path(@real) %> <br /><br />
 
-<%= image_tag("rails.png") %>
+
 
 		<% if @profile != nil %>
-				<h10>With your Savings Plan:</h10>
+				<h3><%= "On the '#{@compare.name}' savings plan:" %></h3>
 				<h3>
-				<%= @compare.name %>
-				<%= "$#{@compare.twentyyears.to_int}.00" %>			
-</h3>				
-				<%= link_to 'Show', @compare %>
-				<%= link_to 'Edit', edit_timeline_path(@compare) %>
-				<%= link_to 'Destroy', @compare, :confirm => 'Are you sure?', :method => :delete %>
+				<%= "$#{@compare.twentyyears.to_int}.00" %>	</h3><br />
+				<%= image_tag("rails.png") %> <br />
+				<%= link_to 'Edit', edit_timeline_path(@compare) %> <br />
 		<% end %>
 
 
 <%= render "timelineform" %>
-
-
-
 
 
 <br/>
