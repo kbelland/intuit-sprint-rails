@@ -12,7 +12,7 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
-        <dependency name="devise" version="0" bound="GREATER_OR_EQUAL" git="true" path="false" doRequire="true" />
+        <dependency name="devise" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
