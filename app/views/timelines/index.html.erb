@@ -69,8 +69,8 @@
 		<body onload="onLoad();" onresize="onResize();">
 			<h3>Your Current Path: </h3>
 <h3>
-				<%= "$#{@real.twentyyears.to_int}.00" %> </h3><br />
-				<%= image_tag("rails.png") %> <br />
+				<%= "$#{number_with_delimiter(@real.twentyyears.to_int, :delimiter => ',')}.00" %> </h3><br />
+				<%= image_tag("goodhouse.jpg") %> <br />
 				<%= link_to 'Edit', edit_timeline_path(@real) %> <br /><br />
 
 
@@ -78,7 +78,7 @@
 		<% if @profile != nil %>
 				<h3><%= "On the '#{@compare.name}' savings plan:" %></h3>
 				<h3>
-				<%= "$#{@compare.twentyyears.to_int}.00" %>	</h3><br />
+				<%= "$#{number_with_delimiter(@compare.twentyyears.to_int, :delimiter => ',')}.00" %>	</h3><br />
 				<%= image_tag("rails.png") %> <br />
 				<%= link_to 'Edit', edit_timeline_path(@compare) %> <br />
 		<% end %>
@@ -96,7 +96,9 @@
 </h2>
 
 <div id="my-timeline" style="height: 150px; border: 1px solid #aaa"></div>
+<% if @profile != nil %>
 <div id="my-timeline2" style="height: 150px; border: 1px solid #aaa"></div>
+<% end %>
 <noscript>
   This page uses Javascript to show you a Timeline. Please enable Javascript in your browser to see the full page. Thank
   you.
