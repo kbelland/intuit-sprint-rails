@@ -81,7 +81,7 @@
 			</tr>
 
 		<% @timelines.each do |timeline| %>
-		<% if timeline.options == 'real' %>
+		<% if timeline.name == 'real' %>
 			<tr>
 				<td><%= timeline.options %></td>
 				<td><%= timeline.twentyyears %></td>
